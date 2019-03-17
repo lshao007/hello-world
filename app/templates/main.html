@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <ul>
+        <li><a href="{{url_for('upload_form')}}">File Upload</a></li>
+        <li><a href="{{url_for('image_form')}}">Image Transform</a></li>
+    </ul>
+
+{% endblock %}

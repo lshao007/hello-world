@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+         <h2>Login</h2>
+
+
+        {{ error if error != None }}
+
+    <div class="margin">
+        <form method='post' action='login_submit'>
+            <div class="margin">
+            <label>Username:</label>
+            <input type='text' name='username' value='{{username if username != None}}' required>
+            </div>
+
+            <div class="margin">
+            <label>Password:</label>
+            <input type='password' name='password' required>
+            </div>
+
+            <input type='submit' value='Login'>
+        </form>
+    </div>
+
+    <a href="{{url_for("new_user")}}">Register</a>
+
+{% endblock %}
+

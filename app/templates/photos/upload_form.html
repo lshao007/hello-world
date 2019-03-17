@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="margin">
+    {{ error if error != None }}
+    </div>
+
+    <div class="margin">
+    <a href="{{url_for('thumbnails')}}">Back to album</a>
+    </div>
+
+
+    <div class="margin">
+     <form action="{{url_for('upload_save')}}"  enctype="multipart/form-data" method="post">
+
+    <div class="margin">
+   	Photo file to upload: <input type="file" name="uploadedfile"><br />
+    </div>
+
+   	<input type="submit" value="Upload">
+	<input type="reset">
+    </form>
+    </div>
+{% endblock %}
